@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	database.Init("***REMOVED***")
+	database.Init(config.DATABASE_URL)
 	tezos.Init(config.RPCURL)
 	res, err := tezos.GetRiverList(config.FACTORY_BIGMAP)
 	if err != nil {
